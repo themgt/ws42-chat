@@ -1,0 +1,15 @@
+<div id="chat" class="well">
+</div>
+
+<div class="form-inline well">
+  <fieldset>
+    <input type="text" class="input-medium" id="user_name">
+    <input type="text" class="input-xlarge" id="message">
+    <button id="send" class="btn btn-primary">Send</button>
+  </fieldset>
+</div>
+<%= javascript_tag do %>
+jQuery(function() {
+  window.chatController = new Chat.Controller("<%= request.host %>:<%= request.port %>/websocket",true);
+})
+<% end %>
