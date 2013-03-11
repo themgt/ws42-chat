@@ -1,5 +1,6 @@
 class ChatController < WebsocketRails::BaseController
-  attr_accessor :message_counter
+  include ActionView::Helpers::SanitizeHelper
+
   def initialize_session
     puts "Session Initialized\n"
   end
@@ -29,12 +30,12 @@ class ChatController < WebsocketRails::BaseController
   end
   
   def new_user
-    connection_store[:user] = { user_name: message[:user_name].dup }
+    connection_store[:user] = { user_name: sanitize(message[:user_name]) }
     broadcast_user_list
   end
   
   def change_username
-    connection_store[:user] = message
+    connection_store[:user] = sanitize(message)
     broadcast_user_list
   end
   
