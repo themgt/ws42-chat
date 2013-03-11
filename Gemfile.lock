@@ -78,7 +78,6 @@ GEM
     mime-types (1.21)
     minitest (4.6.2)
     multi_json (1.6.1)
-    pg (0.14.1)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -147,7 +146,6 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0.beta1)
   jquery-rails
   less-rails
-  pg
   rails (= 4.0.0.beta1)
   sass-rails (~> 4.0.0.beta1)
   therubyracer

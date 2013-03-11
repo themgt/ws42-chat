@@ -1,4 +1,4 @@
-<div id="chat" class="well">
+<div id="chat" class="well" data-uri="<%= request.host %>:<%= request.port %>/websocket">
 </div>
 
 <div class="form-inline well">
@@ -8,8 +8,3 @@
     <button id="send" class="btn btn-primary">Send</button>
   </fieldset>
 </div>
-<%= javascript_tag do %>
-jQuery(function() {
-  window.chatController = new Chat.Controller("<%= request.host %>:<%= request.port %>/websocket",true);
-})
-<% end %>

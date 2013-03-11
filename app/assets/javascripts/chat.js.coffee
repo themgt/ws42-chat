@@ -1,16 +1,13 @@
+jQuery ->
+  window.chatController = new Chat.Controller($('#chat').data('uri'), true);
+
 window.Chat = {}
 
 class Chat.User
-
   constructor: (@user_name) ->
-
-  serialize: =>
-    {
-      user_name: @user_name
-    }
+  serialize: => { user_name: @user_name }
 
 class Chat.Controller
-
   template: (message) ->
     html =
       """
@@ -77,4 +74,3 @@ class Chat.Controller
     $('#username').html @user.user_name
     $('input#user_name').val @user.user_name
     @dispatcher.trigger 'new_user', @user.serialize()
-
