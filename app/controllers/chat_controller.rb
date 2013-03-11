@@ -35,7 +35,7 @@ class ChatController < WebsocketRails::BaseController
   end
   
   def change_username
-    connection_store[:user] = sanitize(message)
+    connection_store[:user][:user_name] = sanitize(message[:user_name])
     broadcast_user_list
   end
   
