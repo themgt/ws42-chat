@@ -1,8 +1,8 @@
 GIT
   remote: git://github.com/DanKnox/websocket-rails.git
-  revision: db6a7147be03929608a0997621a6fec93cc9697b
+  revision: 6662c1c54d554a8e0b374cec98a5dcb1a728e77d
   specs:
-    websocket-rails (0.4.9)
+    websocket-rails (0.5.0)
       em-synchrony
       faye-websocket
       hiredis
@@ -76,7 +76,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.24)
+    mime-types (1.25)
     minitest (4.7.5)
     multi_json (1.7.9)
     polyglot (0.3.3)
